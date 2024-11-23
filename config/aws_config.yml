@@ -1,0 +1,23 @@
+# AWS Configuration
+region: us-east-2
+
+# S3 Configuration
+s3:
+  raw_bucket: dev-ecommerce-raw-data-us-east-2
+  processed_bucket: dev-ecommerce-processed-data-us-east-2
+
+# Lambda Configuration
+lambda:
+  function_name: dev-ecommerce-data-generator
+  memory: 256
+  timeout: 180
+  runtime: python3.11
+
+# CloudWatch Configuration
+cloudwatch:
+  log_retention_days: 30
+  metric_namespace: EcommerceAnalytics
+
+# IAM Roles
+iam:
+  lambda_role: dev-ecommerce-data-generator-role
